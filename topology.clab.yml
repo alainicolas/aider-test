@@ -1,0 +1,13 @@
+name: xrd-lab
+
+topology:
+  nodes:
+    xrd1:
+      kind: vr-xrd
+      image: ghcr.io/nokia/srlinux:latest
+    xrd2:
+      kind: vr-xrd
+      image: ghcr.io/nokia/srlinux:latest
+
+  links:
+    - endpoints: ["xrd1:eth1", "xrd2:eth1"]
